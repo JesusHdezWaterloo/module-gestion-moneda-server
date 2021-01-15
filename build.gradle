@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.root101.module.gestion'
+
+version = '1.0.0.SNAPSHOT.20210115'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-web', version: '5.2.9.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '5.2.9.RELEASE'
+    testImplementation 'junit:junit:4.13'
+
+    implementation project(':utils-core')
+    implementation project(':utils-spring')
+    
+    implementation project(':clean-core')
+    implementation project(':module-util-mysql')
+    
+    implementation project(':module-gestion-moneda-standard')
+    
+    implementation project(':module-control-licence-server')
+    
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+    
+    //EclipseLink
+    compile group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.7.6'
+    compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '2.7.6'
+    
+    //injection
+    compile group: 'com.google.inject', name: 'guice', version: '4.2.3'
+    
+}
