@@ -4,7 +4,7 @@ plugins {
 
 group = 'com.root101.module.gestion'
 
-version = '4.0.1.SNAPSHOT.20210113'
+version = '1.0.0.SNAPSHOT.20210115'
 
 repositories {
     jcenter()
@@ -22,7 +22,7 @@ dependencies {
     implementation project(':clean-core')
     implementation project(':module-util-mysql')
     
-    implementation project(':module-gestion-contabilidad_empresarial-standard')
+    implementation project(':module-gestion-moneda-standard')
     
     implementation project(':module-control-licence-server')
     

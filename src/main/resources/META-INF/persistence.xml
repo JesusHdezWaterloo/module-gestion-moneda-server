@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-    <persistence-unit name="ContabilidadPU" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="MonedaPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>com.jhw.module.gestion.contabilidad.repo.entities.Subcuenta</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.CuentaBancaria</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.CuentaContable</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.Cuadre</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.TipoOperacionContable</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.Titular</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.FormaPago</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.Moneda</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.OperacionContable</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.Liquidacion</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.InfoOperacionContable</class>
-        <class>com.root101.module.gestion.contabilidad.repo.entities.TipoCuenta</class>
+        <class>com.root101.module.gestion.moneda.repo.entities.Moneda</class>
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:7733/root101_sigecon_contabilidad?serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:7733/root101_sigecon_moneda?serverTimezone=UTC"/>
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.password" value=""/>
