@@ -16,7 +16,7 @@
  */
 package com.root101.module.gestion.moneda.repo.entities;
 
-import com.root101.module.gestion.moneda.repo.utils.ResourcesContabilidad;
+import com.root101.module.gestion.moneda.repo.utils.ResourcesMoneda;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import javax.persistence.Basic;
@@ -40,7 +40,7 @@ import javax.validation.constraints.Size;
  * @author JesusHdezWaterloo@Github
  */
 @Entity
-@Table(name = "moneda", schema = ResourcesContabilidad.SCHEMA,
+@Table(name = "moneda", schema = ResourcesMoneda.SCHEMA,
         uniqueConstraints = {
             @UniqueConstraint(columnNames = {"nombre_moneda"})})
 @NamedQueries({

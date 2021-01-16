@@ -22,7 +22,7 @@ import com.google.inject.Injector;
 import com.root101.clean.core.domain.services.ResourceHandler;
 import com.root101.clean.core.exceptions.AlreadyInitModule;
 import com.root101.clean.core.exceptions.NotInitModule;
-import com.root101.module.gestion.moneda.repo.utils.ResourcesContabilidad;
+import com.root101.module.gestion.moneda.repo.utils.ResourcesMoneda;
 import static com.root101.module.gestion.moneda.service.ResourceKeysServer.*;
 
 /**
@@ -37,7 +37,7 @@ public class MonedaRepoModule extends DefaultAbstractModule {
     private static MonedaRepoModule INSTANCE;
 
     private MonedaRepoModule() {
-        ResourcesContabilidad.initEMF();
+        ResourcesMoneda.initEMF();
     }
 
     public static MonedaRepoModule getInstance() {

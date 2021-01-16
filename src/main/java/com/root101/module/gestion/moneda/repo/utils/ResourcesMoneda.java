@@ -25,7 +25,7 @@ import javax.persistence.Persistence;
  * @author Root101 (jhernandezb96@gmail.com, +53-5-426-8660)
  * @author JesusHdezWaterloo@Github
  */
-public class ResourcesContabilidad {
+public class ResourcesMoneda {
 
     public static final String SCHEMA = "root101_sigecon_moneda";
 
