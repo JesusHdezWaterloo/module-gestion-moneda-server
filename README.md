@@ -1,5 +1,5 @@
-## Modulo Gestion Contabilidad Server
+## Modulo Gestion Moneda Server
 
-Modulo para el trabajo con la contabilidad del lado del server, API de contabilidad
+Modulo para el trabajo con las monedas, tasas de cambio y demás, API de moneda
 
 ## Table of Contents
