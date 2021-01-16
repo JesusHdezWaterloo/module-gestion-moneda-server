@@ -19,7 +19,7 @@ package com.root101.module.gestion.moneda.repo.repo_impl;
 import com.root101.module.gestion.moneda.core.domain.MonedaDomain;
 import com.root101.module.gestion.moneda.core.repo_def.MonedaRepo;
 import com.root101.module.gestion.moneda.repo.entities.Moneda;
-import com.root101.module.gestion.moneda.repo.utils.ResourcesContabilidad;
+import com.root101.module.gestion.moneda.repo.utils.ResourcesMoneda;
 import com.root101.repo.jpa.JPACleanCRUDRepo;
 
 /**
@@ -30,7 +30,7 @@ import com.root101.repo.jpa.JPACleanCRUDRepo;
 public class MonedaRepoImpl extends JPACleanCRUDRepo<MonedaDomain, Moneda> implements MonedaRepo {
 
     public MonedaRepoImpl() {
-        super(ResourcesContabilidad.EMF, MonedaDomain.class, Moneda.class);
+        super(ResourcesMoneda.EMF, MonedaDomain.class, Moneda.class);
     }
 
 }
