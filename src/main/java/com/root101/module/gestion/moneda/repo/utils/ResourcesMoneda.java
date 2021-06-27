@@ -32,6 +32,6 @@ public class ResourcesMoneda {
     public static EntityManagerFactory EMF;
 
     public static void initEMF() {
-        EMF = Persistence.createEntityManagerFactory("MonedaPU", MySQLHandler.propertiesMap(SCHEMA));
+        EMF = Persistence.createEntityManagerFactory("MonedaPU"/*, MySQLHandler.propertiesMap(SCHEMA)*/);
     }
 }

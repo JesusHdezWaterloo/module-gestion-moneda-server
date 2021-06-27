@@ -1,18 +1,7 @@
 /*
- * Copyright 2021 Root101 (jhernandezb96@gmail.com, +53-5-426-8660).
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Or read it directly from LICENCE.txt file at the root of this project.
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package com.root101.module.gestion.moneda.repo.entities;
 
@@ -29,20 +18,19 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Root101 (jhernandezb96@gmail.com, +53-5-426-8660)
- * @author JesusHdezWaterloo@Github
+ * @author Yo
  */
 @Entity
 @Table(name = "moneda", schema = ResourcesMoneda.SCHEMA,
         uniqueConstraints = {
             @UniqueConstraint(columnNames = {"nombre_moneda"})})
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Moneda.findAll", query = "SELECT m FROM Moneda m"),
     @NamedQuery(name = "Moneda.findByIdMoneda", query = "SELECT m FROM Moneda m WHERE m.idMoneda = :idMoneda"),
@@ -53,36 +41,28 @@ import javax.validation.constraints.Size;
 public class Moneda implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id_moneda", nullable = false)
     private Integer idMoneda;
-
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 5)
     @Column(name = "nombre_moneda", nullable = false, length = 5)
     private String nombreMoneda;
-
+    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Basic(optional = false)
     @NotNull
-    @Column(name = "compra", nullable = false, precision = 19, scale = 4)
-    @PositiveOrZero
-    @Max(value = Long.MAX_VALUE)
+    @Column(name = "compra", nullable = false, precision = 19, scale = 9)
     private BigDecimal compra;
-
     @Basic(optional = false)
     @NotNull
-    @Column(name = "venta", nullable = false, precision = 19, scale = 4)
-    @PositiveOrZero
-    @Max(value = Long.MAX_VALUE)
+    @Column(name = "venta", nullable = false, precision = 19, scale = 9)
     private BigDecimal venta;
-
     @Basic(optional = false)
     @NotNull
-    @Size(max = 500)
+    @Size(min = 1, max = 500)
     @Column(name = "descripcion", nullable = false, length = 500)
     private String descripcion;
 
@@ -163,7 +143,7 @@ public class Moneda implements Serializable {
 
     @Override
     public String toString() {
-        return "testJPA.entities.contabilidad_empresarial.Moneda[ idMoneda=" + idMoneda + " ]";
+        return "com.root101.module.gestion.moneda.repo.entities.Moneda[ idMoneda=" + idMoneda + " ]";
     }
-
+    
 }
