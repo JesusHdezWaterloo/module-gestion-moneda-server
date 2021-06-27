@@ -4,7 +4,7 @@ plugins {
 
 group = 'com.root101.module.gestion'
 
-version = '1.2.0.RELEASE.20210116'
+version = '2.0.0.RELEASE.20210626'
 
 repositories {
     jcenter()
@@ -26,14 +26,15 @@ dependencies {
     
     implementation project(':module-control-licence-server')
     
-    implementation 'mysql:mysql-connector-java:8.0.17'
     implementation 'javax.xml.bind:jaxb-api:2.3.1'
     implementation 'javax.validation:validation-api:2.0.1.Final'
     implementation 'javax.persistence:javax.persistence-api:2.2'
+    implementation 'mysql:mysql-connector-java:8.0.25'
     
     //EclipseLink
-    implementation 'org.eclipse.persistence:eclipselink:2.7.6'
-    implementation 'org.eclipse.persistence:org.eclipse.persistence.jpa:2.7.6'
+    implementation 'org.eclipse.persistence:eclipselink:3.0.2-RC1'
+    implementation 'org.eclipse.persistence:org.eclipse.persistence.jpa:3.0.2-RC1'
+    implementation 'org.hibernate:hibernate-core:5.5.3.Final'
     
     //injection
     implementation 'com.google.inject:guice:5.0.1'
