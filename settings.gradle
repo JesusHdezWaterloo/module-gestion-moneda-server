@@ -9,14 +9,8 @@ project(':utils-spring').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Grad
 include ':utils-core'
 project(':utils-core').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\utils-core" as File
 
-include ':module-gestion-moneda-standard'
-project(':module-gestion-moneda-standard').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-gestion-moneda-standard" as File
-
 include ':module-util-mysql'
 project(':module-util-mysql').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-util-mysql" as File
 
 include ':module-control-licence-server'
 project(':module-control-licence-server').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-control-licence-server" as File
-
-include ':module-control-licence-standard'
-project(':module-control-licence-standard').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\module-control-licence-standard" as File
