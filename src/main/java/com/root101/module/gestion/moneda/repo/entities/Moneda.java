@@ -27,7 +27,9 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Yo
  */
 @Entity
-@Table(name = "moneda", schema = ResourcesMoneda.SCHEMA,
+@Table(name = "moneda",
+        catalog = ResourcesMoneda.SCHEMA,
+        schema = ResourcesMoneda.SCHEMA,
         uniqueConstraints = {
             @UniqueConstraint(columnNames = {"nombre_moneda"})})
 @XmlRootElement
@@ -145,5 +147,5 @@ public class Moneda implements Serializable {
     public String toString() {
         return "com.root101.module.gestion.moneda.repo.entities.Moneda[ idMoneda=" + idMoneda + " ]";
     }
-    
+
 }
