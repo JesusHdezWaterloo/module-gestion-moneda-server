@@ -19,13 +19,14 @@ public class CoreLayerTest {
 
     public CoreLayerTest() {
         ConverterServiceJSONImpl.INSTANCE();
+        
+        MonedaCoreModule.init(MonedaRepoModule.init());
     }
 
     @Test
     public void coreTest() {
         System.out.println("Testing Core...");
 
-        MonedaCoreModule.init(MonedaRepoModule.init());
         MonedaUseCase uc = MonedaCoreModule.getInstance().getImplementation(MonedaUseCase.class);
         System.out.println(uc.findAll());
 

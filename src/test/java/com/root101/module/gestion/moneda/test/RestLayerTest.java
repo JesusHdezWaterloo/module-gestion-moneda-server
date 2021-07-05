@@ -7,11 +7,6 @@ package com.root101.module.gestion.moneda.test;
 
 import com.root101.json.ConverterServiceJSONImpl;
 import com.root101.module.gestion.moneda.core.domain.MonedaDomain;
-import com.root101.module.gestion.moneda.core.module.MonedaCoreModule;
-import com.root101.module.gestion.moneda.core.repo_def.MonedaRepo;
-import com.root101.module.gestion.moneda.core.usecase_def.MonedaUseCase;
-import com.root101.module.gestion.moneda.repo.module.MonedaRepoModule;
-import com.root101.module.gestion.moneda.repo.repo_impl.MonedaRepoImpl;
 import com.root101.module.gestion.moneda.rest.ModuleGestionMonedaRESTConstants;
 import com.root101.spring.client.RestTemplateUtils;
 import com.root101.spring.server.RESTUrlConstants;
