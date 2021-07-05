@@ -25,6 +25,6 @@ public class ResourceKeysServer {
 
     public static final String KEY_MODULE_NAME_MONEDA = "com.root.module.gestion.moneda.name";
     
-    public static final String RESOURCE_URL = "module_moneda_server";
+    public static final String RESOURCE_URL = "module_moneda";
 
 }

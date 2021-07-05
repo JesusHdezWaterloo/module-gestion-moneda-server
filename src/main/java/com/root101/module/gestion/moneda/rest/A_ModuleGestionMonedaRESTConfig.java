@@ -39,7 +39,6 @@ public class A_ModuleGestionMonedaRESTConfig {
 
     static {
         ResourceHandler.registerInternal(ResourceKeysServer.RESOURCE_URL);
-        ResourceHandler.registerInternal(ResourceKeysStandard.RESOURCE_URL);
         
         MonedaCoreModule.init(MonedaRepoModule.init());
 

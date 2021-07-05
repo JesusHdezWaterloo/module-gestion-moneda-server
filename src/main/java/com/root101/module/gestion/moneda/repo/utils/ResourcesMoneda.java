@@ -27,7 +27,7 @@ import javax.persistence.Persistence;
  */
 public class ResourcesMoneda {
 
-    public static final String SCHEMA = "root101_sigecon_moneda";
+    public static final String SCHEMA_CATALOG = "root101_sigecon_moneda";
 
     public static EntityManagerFactory EMF;
 

@@ -4,7 +4,7 @@ plugins {
 
 group = 'com.root101.module.gestion'
 
-version = '3.0.0.RELEASE.20210628'
+version = '3.0.1.RELEASE.20210705'
 
 repositories {
     jcenter()
@@ -12,6 +12,8 @@ repositories {
 }
 
 dependencies {
+    testImplementation 'junit:junit:4.13'
+    
     implementation 'org.springframework:spring-web:5.2.9.RELEASE'
     implementation 'org.springframework:spring-context:5.2.9.RELEASE'
 

@@ -28,8 +28,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "moneda",
-        catalog = ResourcesMoneda.SCHEMA,
-        schema = ResourcesMoneda.SCHEMA,
+        catalog = ResourcesMoneda.SCHEMA_CATALOG,
+        schema = ResourcesMoneda.SCHEMA_CATALOG,
         uniqueConstraints = {
             @UniqueConstraint(columnNames = {"nombre_moneda"})})
 @XmlRootElement

@@ -28,3 +28,7 @@ hs_err_pid*
 build/
 css_batick_default_override.css
 
+
+nbproject/project.properties
+
+src/main/java/com/root101/module/gestion/moneda/MainTest.java
