@@ -25,10 +25,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 public class ModuleGestionMonedaRESTConstants {
 
-    public static final String CONTABILIDAD_GENERAL_PATH = "/moneda";
-
     //-----------------------MONEDA-----------------------\\
-    public static final String MONEDA_GENERAL_PATH = CONTABILIDAD_GENERAL_PATH + "/moneda";
+    public static final String MONEDA_GENERAL_PATH = "/moneda";
 
     public static final String MONEDA_FIND_BASE_PATH = "/find_base";
     public static final RequestMethod MONEDA_FIND_BASE_METHOD = RequestMethod.GET;
