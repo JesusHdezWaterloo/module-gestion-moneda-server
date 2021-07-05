@@ -18,13 +18,14 @@ public class RepoLayerTest {
 
     public RepoLayerTest() {
         ConverterServiceJSONImpl.INSTANCE();
+        
+        MonedaRepoModule.init();
     }
 
     @Test
     public void repoTest() {
         System.out.println("Testing Repo...");
 
-        MonedaRepoModule.init();
         MonedaRepo repo = MonedaRepoModule.getInstance().getImplementation(MonedaRepo.class);
         System.out.println(repo.findAll());
 
