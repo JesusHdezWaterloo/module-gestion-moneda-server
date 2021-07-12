@@ -19,9 +19,8 @@ package com.root101.module.gestion.moneda.consume.repo_impl;
 import com.root101.module.gestion.moneda.consume.repo_def.MonedaRepoConsume;
 import com.root101.module.gestion.moneda.core.domain.MonedaDomain;
 import static com.root101.module.gestion.moneda.rest.ModuleGestionMonedaRESTConstants.*;
-//import com.root101.module.util.rest_config.services.RESTHandler;
 import com.root101.spring.client.ConsumerRepoTemplate;
-import org.springframework.web.client.RestOperations;
+import org.springframework.web.client.RestTemplate;
 
 /**
  *
@@ -30,8 +29,10 @@ import org.springframework.web.client.RestOperations;
  */
 public class MonedaRepoConsumeImpl extends ConsumerRepoTemplate<MonedaDomain> implements MonedaRepoConsume {
 
+    private static final String URL_GENERAL = "http://localhost:8080";
+
     public MonedaRepoConsumeImpl() {
-        super(MonedaDomain.class, /*RESTHandler.urlActualREST() +*/ MONEDA_GENERAL_PATH, (RestOperations) null);//null==supplier RestOperations
+        super(MonedaDomain.class, URL_GENERAL + MONEDA_GENERAL_PATH, new RestTemplate());//null==supplier RestOperations
     }
 
     @Override
