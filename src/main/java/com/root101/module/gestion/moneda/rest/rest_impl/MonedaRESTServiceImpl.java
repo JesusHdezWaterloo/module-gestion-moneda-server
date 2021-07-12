@@ -14,12 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.root101.module.gestion.moneda.rest;
+package com.root101.module.gestion.moneda.rest.rest_impl;
 
 import com.root101.module.gestion.moneda.core.domain.MonedaDomain;
 import com.root101.module.gestion.moneda.core.usecase_def.MonedaUseCase;
+import com.root101.module.gestion.moneda.rest.A_ModuleGestionMonedaRESTConfig;
 import com.root101.spring.server.RESTServiceTemplate;
 import static com.root101.module.gestion.moneda.rest.ModuleGestionMonedaRESTConstants.*;
+import com.root101.module.gestion.moneda.rest.rest_def.MonedaRESTService;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -29,11 +31,11 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping(value = MONEDA_GENERAL_PATH)
-public class MonedaRESTService extends RESTServiceTemplate<MonedaDomain> implements MonedaUseCase {
+public class MonedaRESTServiceImpl extends RESTServiceTemplate<MonedaDomain> implements MonedaRESTService {
 
     private final MonedaUseCase monedaUC = A_ModuleGestionMonedaRESTConfig.monedaUC;
 
-    public MonedaRESTService() {
+    public MonedaRESTServiceImpl() {
         setUseCase(monedaUC);
     }
 
